@@ -1,0 +1,8 @@
+export const MAIN_WRAP = "MAIN_WRAP";
+export const SET_LANGUAGE = "SET_LANGUAGE";
+//
+export const SEARCH_SCROLL_REQUEST = "SEARCH_SCROLL_REQUEST";
+export const SCROLL_SUCCES = "SCROLL_SUCCES";
+export const SEARCH_REQUEST = "SEARCH_REQUEST";
+export const SEARCH_SUCCES = "SEARCH_SUCCES";
+export const SEARCH_FAILED = "SEARCH_FAILD";
