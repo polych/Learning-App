@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/polych.github.io/Learning-App/static/css/main.b2750702.chunk.css",
+    "main.js": "/polych.github.io/Learning-App/static/js/main.71cc9d59.chunk.js",
+    "main.js.map": "/polych.github.io/Learning-App/static/js/main.71cc9d59.chunk.js.map",
+    "runtime-main.js": "/polych.github.io/Learning-App/static/js/runtime-main.88c348b7.js",
+    "runtime-main.js.map": "/polych.github.io/Learning-App/static/js/runtime-main.88c348b7.js.map",
+    "static/js/2.f930c360.chunk.js": "/polych.github.io/Learning-App/static/js/2.f930c360.chunk.js",
+    "static/js/2.f930c360.chunk.js.map": "/polych.github.io/Learning-App/static/js/2.f930c360.chunk.js.map",
+    "index.html": "/polych.github.io/Learning-App/index.html",
+    "precache-manifest.08f3cc32400abe17bd732bb326541625.js": "/polych.github.io/Learning-App/precache-manifest.08f3cc32400abe17bd732bb326541625.js",
+    "service-worker.js": "/polych.github.io/Learning-App/service-worker.js",
+    "static/css/main.b2750702.chunk.css.map": "/polych.github.io/Learning-App/static/css/main.b2750702.chunk.css.map",
+    "static/js/2.f930c360.chunk.js.LICENSE.txt": "/polych.github.io/Learning-App/static/js/2.f930c360.chunk.js.LICENSE.txt",
+    "static/media/general.scss": "/polych.github.io/Learning-App/static/media/Inter-SemiBold.ec60b23f.ttf",
+    "static/media/arrowDown.svg": "/polych.github.io/Learning-App/static/media/arrowDown.b34c339f.svg",
+    "static/media/camera.svg": "/polych.github.io/Learning-App/static/media/camera.9465aead.svg",
+    "static/media/dd.png": "/polych.github.io/Learning-App/static/media/dd.31de1ad1.png",
+    "static/media/deleteIcon.svg": "/polych.github.io/Learning-App/static/media/deleteIcon.f0f5abf3.svg",
+    "static/media/info.svg": "/polych.github.io/Learning-App/static/media/info.7743de1c.svg",
+    "static/media/sheets2.svg": "/polych.github.io/Learning-App/static/media/sheets2.8d2048c6.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.88c348b7.js",
+    "static/js/2.f930c360.chunk.js",
+    "static/css/main.b2750702.chunk.css",
+    "static/js/main.71cc9d59.chunk.js"
+  ]
+}
