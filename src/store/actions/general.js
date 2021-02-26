@@ -1,11 +1,10 @@
-import { MAIN_WRAP, SET_LANGUAGE } from "../constans";
-
-export const setWrap = (wrap) => ({
-  type: MAIN_WRAP,
-  payload: wrap,
-});
+import { SET_LANGUAGE, MAIN_REF } from "../constans";
 
 export const setLanguage = (value) => ({
   type: SET_LANGUAGE,
   payload: value,
+});
+export const mainRefAction = (ref) => ({
+  type: MAIN_REF,
+  payload: ref,
 });

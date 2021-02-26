@@ -7,11 +7,12 @@ import { useSelector } from "react-redux";
 const SearchItem = ({
   item: {
     snippet: { channelTitle, description, thumbnails, title },
+    id: { videoId },
   },
 }) => {
   const { language } = useSelector((state) => state.general);
   return (
-    <Link to="/" className="search_item">
+    <Link to={`/view/${videoId}`} className="search_item">
       <div className="search_item_img">
         <img src={thumbnails.high.url} alt="" />
       </div>

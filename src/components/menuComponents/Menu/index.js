@@ -5,13 +5,11 @@ import "./index.scss";
 
 const Menu = () => {
   return (
-    <div className="side_menu_wrap">
-      <div className="side_menu">
-        <Link to="/" className="side_menu_logo">
-          <h3>Logo</h3>
-        </Link>
-        <MenuList />
-      </div>
+    <div className="side_menu">
+      <Link to="/" className="side_menu_logo">
+        <h3>Logo</h3>
+      </Link>
+      <MenuList />
     </div>
   );
 };

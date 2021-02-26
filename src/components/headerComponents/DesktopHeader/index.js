@@ -4,9 +4,6 @@ import Select from "../../UiComponents/Select";
 import Avatar from "../../UiComponents/Avatar";
 import { selectLanguage } from "../../../helpers/GeneralObjects";
 import LogOutIcon from "../../icons/LogOutIcon";
-import { useDispatch } from "react-redux";
-import { setLanguage } from "../../../store/actions/general";
-
 // delete this
 const select2 = {
   showList: false,
@@ -14,10 +11,6 @@ const select2 = {
   countryList: [{ value: "LogOut", name: "Log Out", icon: <LogOutIcon /> }],
 };
 const DesktopHeader = () => {
-  const dispatch = useDispatch();
-  const handleChange = (option) => {
-    dispatch(setLanguage(option.name));
-  };
   return (
     <div className="header_main">
       <SerchField />
@@ -25,7 +18,6 @@ const DesktopHeader = () => {
         <Select
           optionsList={selectLanguage.countryList}
           defaultText={selectLanguage.defaultSelectText}
-          handleChange={handleChange}
         />
         <Select
           optionsList={select2.countryList}

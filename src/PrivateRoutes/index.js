@@ -1,26 +1,31 @@
-import React, { useEffect, useRef } from "react";
-import { useDispatch } from "react-redux";
+import React, { useRef, useEffect } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { mainRefAction } from "../store/actions/general";
+import ViewPage from "../pages/ViewPage";
+import HomePage from "../pages/HomePage";
 import Header from "../components/headerComponents/Header";
 import Menu from "../components/menuComponents/Menu";
 import SearchPage from "../pages/SearchPage";
-import { setWrap } from "../store/actions/general";
-const user = true;
+
 const PrivateRoutes = () => {
   const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
+  const mainRef = useRef(null);
   const mobile = window.innerWidth < 768;
-  const main = useRef(null);
   useEffect(() => {
-    dispatch(setWrap(main));
+    dispatch(mainRefAction(mainRef.current));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [main]);
+  }, [mainRef]);
   return user ? (
     <>
       {!mobile && <Menu />}
-      <main ref={main}>
+      <main ref={mainRef}>
         <Header mobile={mobile} />
         <Switch>
-          <Route exact path="/" component={SearchPage} />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/view/:id" component={ViewPage} />
+          <Route exact path="/search" component={SearchPage} />
         </Switch>
       </main>
     </>

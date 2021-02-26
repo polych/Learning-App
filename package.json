@@ -1,4 +1,5 @@
 {
+  "homepage": "https:/polych.github.io/Learning-App",
   "name": "learning-app",
   "version": "0.1.0",
   "private": true,
@@ -12,17 +13,22 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-player": "^2.7.2",
+    "react-preloaders": "^3.0.3",
     "react-redux": "^7.2.1",
+    "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.4",
     "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
     "redux-saga": "^1.1.3",
+    "use-debounce": "^5.2.0",
     "uuid": "^8.3.2",
+    "xml2js": "^0.4.23",
     "yup": "^0.32.8"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,10 +50,11 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^6.6.0",
+    "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.14.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react": "^7.22.0",
+    "gh-pages": "^3.1.0",
     "prettier": "^2.1.2"
   }
 }

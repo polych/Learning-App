@@ -3,7 +3,7 @@ import { v4 } from "uuid";
 import "./index.scss";
 import arrow from "../../../static/images/arrowDown.svg";
 
-const Select = ({ children, optionsList, defaultText, handleChange }) => {
+const Select = ({ children, optionsList, defaultText }) => {
   const [state, setState] = useState({
     labelText: "",
     showOptionList: false,
@@ -47,12 +47,11 @@ const Select = ({ children, optionsList, defaultText, handleChange }) => {
 
   // This method handles the setting of name in select text area
   // and list display on selection
-  const handleOptionClick = (option) => () => {
+  const handleOptionClick = (e) => {
     setState({
-      labelText: option.value,
+      labelText: e.target.getAttribute("data-name"),
       showOptionList: false,
     });
-    handleChange && handleChange(option);
   };
   const { showOptionList, labelText } = state;
   return (
@@ -73,8 +72,9 @@ const Select = ({ children, optionsList, defaultText, handleChange }) => {
           {optionsList.map((option) => {
             return (
               <li
+                data-name={option.value}
                 key={v4()}
-                onClick={handleOptionClick(option)}
+                onClick={handleOptionClick}
                 className={labelText === option.name ? "active_option" : ""}
               >
                 {option.icon}

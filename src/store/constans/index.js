@@ -1,8 +1,16 @@
-export const MAIN_WRAP = "MAIN_WRAP";
 export const SET_LANGUAGE = "SET_LANGUAGE";
+export const MAIN_REF = "MAIN_REF";
+export const REQUEST_FAILED = "REQUEST_FAILED";
 //
 export const SEARCH_SCROLL_REQUEST = "SEARCH_SCROLL_REQUEST";
 export const SCROLL_SUCCES = "SCROLL_SUCCES";
 export const SEARCH_REQUEST = "SEARCH_REQUEST";
 export const SEARCH_SUCCES = "SEARCH_SUCCES";
 export const SEARCH_FAILED = "SEARCH_FAILD";
+//
+export const SET_USER = "SET_USER";
+
+//
+export const SUBTITLES_REQUEST = "SUBTITLES_REQUEST";
+export const SUBTITLES_SUCCES = "SUBTITLES_SUCCES";
+export const FOCUS_CAPTIONS = "FOCUS_CAPTIONS";

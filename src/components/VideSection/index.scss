@@ -1,0 +1,19 @@
+.video_section{
+width: 100%;
+margin-right: 25px;
+position: relative;
+overflow: hidden;
+border-radius: 10px;
+    .tooltip_wrap{
+        right: 10px;
+        top: 10px;
+    }
+    &:hover{
+        .captions{
+            bottom: 50px;
+        }
+    }
+}
+.video_wrap{
+    width: 100%;
+}
