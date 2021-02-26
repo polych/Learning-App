@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Learning-App/static/css/main.9fb0e915.chunk.css",
-    "main.js": "/Learning-App/static/js/main.71cc9d59.chunk.js",
-    "main.js.map": "/Learning-App/static/js/main.71cc9d59.chunk.js.map",
+    "main.js": "/Learning-App/static/js/main.e009d211.chunk.js",
+    "main.js.map": "/Learning-App/static/js/main.e009d211.chunk.js.map",
     "runtime-main.js": "/Learning-App/static/js/runtime-main.3cc755ec.js",
     "runtime-main.js.map": "/Learning-App/static/js/runtime-main.3cc755ec.js.map",
     "static/js/2.f930c360.chunk.js": "/Learning-App/static/js/2.f930c360.chunk.js",
     "static/js/2.f930c360.chunk.js.map": "/Learning-App/static/js/2.f930c360.chunk.js.map",
     "index.html": "/Learning-App/index.html",
-    "precache-manifest.f2fe532a43a6bcd67802efc4bfcc6495.js": "/Learning-App/precache-manifest.f2fe532a43a6bcd67802efc4bfcc6495.js",
+    "precache-manifest.3a27c60a232f01d6b339088a6630153b.js": "/Learning-App/precache-manifest.3a27c60a232f01d6b339088a6630153b.js",
     "service-worker.js": "/Learning-App/service-worker.js",
     "static/css/main.9fb0e915.chunk.css.map": "/Learning-App/static/css/main.9fb0e915.chunk.css.map",
     "static/js/2.f930c360.chunk.js.LICENSE.txt": "/Learning-App/static/js/2.f930c360.chunk.js.LICENSE.txt",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.3cc755ec.js",
     "static/js/2.f930c360.chunk.js",
     "static/css/main.9fb0e915.chunk.css",
-    "static/js/main.71cc9d59.chunk.js"
+    "static/js/main.e009d211.chunk.js"
   ]
 }
