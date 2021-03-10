@@ -2,27 +2,26 @@ import React, { useState, useEffect, useRef } from "react";
 import "./index.scss";
 import ReactPlayer from "react-player";
 import SubtitlesList from "../../components/SubtitlesList";
-import Tooltip from "../UiComponents/Tooltip";
 import TranslateModal from "../../components/TranslateModal";
 import { useDispatch, useSelector } from "react-redux";
 import { getSubtitles } from "../../store/actions/videoActions";
 import Captions from "../Captions";
 
-const message =
-  "To extend the selection by few words press and hold 'space' + 'right arrow'";
-
 const VideSection = ({ id }) => {
   const ref = useRef(null);
-  const { focusCaptions } = useSelector((state) => state.video);
+  const dispatch = useDispatch();
+  const {
+    video: { focusCaptions, translatedCaptions },
+    general: { language },
+  } = useSelector((state) => state);
   const [state, setState] = useState({
     playingTime: 0,
     playing: false,
   });
-  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSubtitles(id));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [language.name]);
   const progressFunc = (props) => {
     setState((prevState) => {
       return {
@@ -37,11 +36,10 @@ const VideSection = ({ id }) => {
   return (
     <div className="video_wrap">
       <div className="video_section">
-        {console.log(state.playing)}
         <ReactPlayer
           url={`https://www.youtube.com/watch?v=${id}`}
           controls={true}
-          width="100%"
+          className="video_block"
           onProgress={progressFunc}
           playing={state.playing}
           onPlay={videoPlay(true)}
@@ -57,9 +55,10 @@ const VideSection = ({ id }) => {
           ref={ref}
         />
         <Captions videoTime={state.playingTime} videoPlay={videoPlay(false)} />
-        {focusCaptions && (
+        {focusCaptions && translatedCaptions && (
           <TranslateModal
             captions={focusCaptions}
+            translatedCaptions={translatedCaptions}
             videoPlay={videoPlay(true)}
           />
         )}

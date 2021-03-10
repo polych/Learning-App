@@ -22,7 +22,6 @@ export function* scrollSearch(action) {
   const {
     searchReducer: { nextPage, searchResults, query },
   } = yield select();
-  console.log(nextPage, searchResults, query);
   const newarr = [...searchResults];
   try {
     const response = yield call(API.searchPagination, query, nextPage);

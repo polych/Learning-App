@@ -5,9 +5,7 @@ import { fetchSearch } from "../../../store/actions/searchActions";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-const SerchField = ({
-  placeholder = "Enter the word you are searching for...  ",
-}) => {
+const SerchField = ({ placeholder = "Search videos..." }) => {
   const [state, setState] = useState(null);
   const dispatch = useDispatch();
   const history = useHistory();

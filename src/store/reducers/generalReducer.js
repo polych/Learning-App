@@ -3,12 +3,21 @@ import {
   SEARCH_REQUEST,
   SEARCH_SUCCES,
   MAIN_REF,
+  LANGUAGES_SUCCES,
 } from "../constans";
 
+const lang = JSON.parse(localStorage.getItem("language"));
+
 const initState = {
-  language: "Ukrainian",
+  language: lang
+    ? lang
+    : {
+        name: "English",
+        value: "en",
+      },
   load: false,
   mainRef: null,
+  languages: null,
 };
 const general = (state = initState, action) => {
   switch (action.type) {
@@ -16,6 +25,11 @@ const general = (state = initState, action) => {
       return {
         ...state,
         mainRef: action.payload,
+      };
+    case LANGUAGES_SUCCES:
+      return {
+        ...state,
+        languages: action.payload,
       };
     case SET_LANGUAGE:
       return {

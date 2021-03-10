@@ -1,31 +1,26 @@
 import React from "react";
 import "./index.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { focusCaptions } from "../../store/actions/videoActions";
+import { fetchTextTranslate } from "../../store/actions/videoActions";
+import { captionText } from "../../helpers/videoPage";
 
-const Captions = ({ videoTime, videoPlay }) => {
+const Captions = ({ videoTime = 0, videoPlay }) => {
   const dispatch = useDispatch();
-  const subtitles = useSelector((state) => state.video.subtitles);
-  if (!subtitles) {
+  const { subtitlesOriginal } = useSelector((state) => state.video.subtitles);
+  if (!subtitlesOriginal) {
     return <></>;
   }
   const func = (event) => {
     const text = window.getSelection();
-    dispatch(focusCaptions(text.toString()));
+    dispatch(fetchTextTranslate(text.toString()));
   };
   const funcStop = () => {
     videoPlay();
   };
-  const captions = subtitles.find(
-    (el) =>
-      videoTime >= Number(el.time.start) &&
-      videoTime <= Number(el.time.start) + Number(el.time.dur)
-  );
-
   return (
     <p className="captions">
       <span onSelect={func} onMouseDown={funcStop} onMouseUp={func}>
-        {captions && captions.text}
+        {captionText(subtitlesOriginal, videoTime)}
       </span>
     </p>
   );

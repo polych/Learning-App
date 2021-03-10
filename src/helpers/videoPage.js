@@ -5,10 +5,16 @@ export const seconds = (sec) => {
 };
 
 export const fiterSubtitles = (arr, videoTime) => {
-  const filteredArr = arr.filter((el) => videoTime >= Number(el.time.start));
+  const filteredArr = arr.filter((el) => videoTime >= +el.start);
   const subtitles = filteredArr.map((el) => ({
     ...el,
-    time: { ...el.time, start: seconds(el.time.start) },
+    start: seconds(el.start),
   }));
   return [...subtitles].reverse();
+};
+export const captionText = (arr, videoTime) => {
+  const a = arr.filter((el) => videoTime >= +el.start);
+  if (a.length > 0) {
+    return a[a.length - 1].text;
+  }
 };

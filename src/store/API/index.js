@@ -5,8 +5,7 @@ const getHttpHeaders = () => {
   };
 };
 const getConfig = () => ({ headers: getHttpHeaders() });
-const baseUrl = `http://cq29081-django.tw1.ru/api/v1`;
-
+const baseUrl = `/api/v1`;
 class API {
   static search(query) {
     return axios.get(`${baseUrl}/search-by-name/${query}`, getConfig());
@@ -17,10 +16,15 @@ class API {
       getConfig()
     );
   }
-  static getSubtitles(id) {
-    return axios.get(`${baseUrl}/get-subtitles/${id}`, {
-      "Content-Type": "application/xml; charset=utf-8",
-    });
+  static getSubtitles({ id, language }) {
+    return axios.get(`${baseUrl}/get-subtitles/${id}/${language}`, getConfig());
+  }
+  static textTranslate({ text, from, to }) {
+    console.log(text, from, to);
+    return axios.get(`${baseUrl}/trans/${text}/${from}/${to}`, getConfig());
+  }
+  static getLanguages() {
+    return axios.get(`${baseUrl}/get-langs`, getConfig());
   }
 }
 export default API;

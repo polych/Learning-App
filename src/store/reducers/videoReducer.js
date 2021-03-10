@@ -1,7 +1,15 @@
-import { SUBTITLES_SUCCES, FOCUS_CAPTIONS } from "../constans";
+import {
+  SUBTITLES_SUCCES,
+  FOCUS_CAPTIONS,
+  TEXT_TRANSLATE_SUCCES,
+} from "../constans";
 const initState = {
-  subtitles: null,
+  subtitles: {
+    subtitlesTranslated: null,
+    subtitlesOriginal: null,
+  },
   focusCaptions: null,
+  translatedCaptions: null,
 };
 const videoReducer = (state = initState, action) => {
   switch (action.type) {
@@ -14,6 +22,12 @@ const videoReducer = (state = initState, action) => {
       return {
         ...state,
         focusCaptions: action.payload,
+      };
+    case TEXT_TRANSLATE_SUCCES:
+      return {
+        ...state,
+        focusCaptions: action.payload.focusCaptions,
+        translatedCaptions: action.payload.translatedCaptions,
       };
     default:
       return state;

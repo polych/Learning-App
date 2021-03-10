@@ -28,7 +28,7 @@ const SearchItem = ({
         <p className="search_item_dscr">{description}</p>
         <div className="">
           <CategoryItem label="English" value="Eng" />
-          <CategoryItem label={language} value={language} />
+          <CategoryItem label={language.name} value={language.value} />
         </div>
       </div>
     </Link>

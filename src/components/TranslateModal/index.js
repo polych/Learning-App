@@ -1,20 +1,19 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { focusCaptions } from "../../store/actions/videoActions";
-
+import { TextTranslateSucces } from "../../store/actions/videoActions";
 import "./index.scss";
 
-const TranslateModal = ({ captions, videoPlay }) => {
+const TranslateModal = ({ captions, videoPlay, translatedCaptions }) => {
   const dispatch = useDispatch();
   const handleClick = () => {
-    dispatch(focusCaptions(false));
+    dispatch(TextTranslateSucces(null, null));
     videoPlay();
   };
   return (
     <div className="translate_modal">
       <h3>{captions}</h3>
       <p className="translate_modal_title">Translation</p>
-      <p>Отопление наш дом, и мы нагреваем нашу воду, а затем</p>
+      <p>{translatedCaptions}</p>
       <div className="translate_modal_btns">
         <button type="button" onClick={handleClick}>
           Cancel
