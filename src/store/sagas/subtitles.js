@@ -11,7 +11,7 @@ export function* fetchSubtitles(action) {
   const state = yield select();
   const obj = {
     id: action.payload,
-    language: state.general.language.value,
+    language: state.general.language.snippet.hl,
   };
   try {
     const response = yield call(API.getSubtitles, obj);
@@ -35,7 +35,7 @@ export function* fetchLanguages() {
     const response = yield call(API.getLanguages, {});
     yield put({
       type: LANGUAGES_SUCCES,
-      payload: response.data,
+      payload: response.data.items,
     });
   } catch (error) {
     yield put({

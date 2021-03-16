@@ -12,9 +12,11 @@ const initState = {
   language: lang
     ? lang
     : {
+      snippet: {
         name: "English",
-        value: "en",
+        hl: "en",
       },
+    },
   load: false,
   mainRef: null,
   languages: null,
