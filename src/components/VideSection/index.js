@@ -21,7 +21,7 @@ const VideSection = ({ id }) => {
   useEffect(() => {
     dispatch(getSubtitles(id));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [language.name]);
+  }, [language.id]);
   const progressFunc = (props) => {
     setState((prevState) => {
       return {
