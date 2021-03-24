@@ -5,9 +5,15 @@ import {
   SUBTITLES_REQUEST,
   LANGUAGES_REQUEST,
   TEXT_TRANSLATE_REQUEST,
+  VIDEO_LANG_REQUEST,
 } from "../constans";
 import { fetchSearch, scrollSearch } from "./search";
-import { fetchSubtitles, fetchLanguages, fetchTranslate } from "./subtitles";
+import {
+  fetchSubtitles,
+  fetchLanguages,
+  fetchTranslate,
+  videoLang,
+} from "./subtitles";
 
 export default function* watchAll() {
   yield takeLatest(SEARCH_REQUEST, fetchSearch);
@@ -15,4 +21,5 @@ export default function* watchAll() {
   yield takeLatest(SUBTITLES_REQUEST, fetchSubtitles);
   yield takeLatest(LANGUAGES_REQUEST, fetchLanguages);
   yield takeLatest(TEXT_TRANSLATE_REQUEST, fetchTranslate);
+  yield takeLatest(VIDEO_LANG_REQUEST, videoLang);
 }

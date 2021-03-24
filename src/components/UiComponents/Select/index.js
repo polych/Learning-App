@@ -48,7 +48,6 @@ const Select = ({ children, optionsList, defaultText, selectAction }) => {
   // This method handles the setting of name in select text area
   // and list display on selection
   const handleOptionClick = (el) => () => {
-    console.log(el);
     setState({
       labelText: el.name,
       showOptionList: false,

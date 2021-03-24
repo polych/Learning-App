@@ -1,18 +1,21 @@
 import {
   SUBTITLES_REQUEST,
-  FOCUS_CAPTIONS,
   TEXT_TRANSLATE_REQUEST,
   TEXT_TRANSLATE_SUCCES,
+  SET_VIDEO_LANGUAGE,
+  VIDEO_LANG_REQUEST,
 } from "../constans";
 
+export const getVideoLang = (id, lang) => ({
+  type: VIDEO_LANG_REQUEST,
+  payload: {
+    id,
+    lang,
+  },
+});
 export const getSubtitles = (id) => ({
   type: SUBTITLES_REQUEST,
   payload: id,
-});
-
-export const focusCaptions = (text) => ({
-  type: FOCUS_CAPTIONS,
-  payload: text,
 });
 
 export const fetchTextTranslate = (text) => ({
@@ -25,4 +28,8 @@ export const TextTranslateSucces = (text, translated) => ({
     focusCaptions: text,
     translatedCaptions: translated,
   },
+});
+export const setVideoLang = (lang) => ({
+  type: SET_VIDEO_LANGUAGE,
+  payload: lang,
 });

@@ -2,11 +2,16 @@ import {
   SUBTITLES_SUCCES,
   FOCUS_CAPTIONS,
   TEXT_TRANSLATE_SUCCES,
+  VIDEO_LANG_SUCCES,
 } from "../constans";
 const initState = {
   subtitles: {
     subtitlesTranslated: null,
     subtitlesOriginal: null,
+    languages: {
+      original_lang: "en",
+      translated_to: "uk",
+    },
   },
   focusCaptions: null,
   translatedCaptions: null,
@@ -23,6 +28,19 @@ const videoReducer = (state = initState, action) => {
         ...state,
         focusCaptions: action.payload,
       };
+    case VIDEO_LANG_SUCCES: {
+      console.log(action.payload);
+      return {
+        ...state,
+        subtitles: {
+          ...state.subtitles,
+          languages: {
+            ...state.subtitles.languages,
+            original_lang: action.payload,
+          },
+        },
+      };
+    }
     case TEXT_TRANSLATE_SUCCES:
       return {
         ...state,

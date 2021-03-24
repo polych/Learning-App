@@ -5,7 +5,7 @@ const getHttpHeaders = () => {
   };
 };
 const getConfig = () => ({ headers: getHttpHeaders() });
-const baseUrl = `/api/v1`;
+const baseUrl = `146.59.151.245/api/v1`;
 class API {
   static search(query) {
     return axios.get(`${baseUrl}/search-by-name/${query}`, getConfig());
@@ -16,8 +16,14 @@ class API {
       getConfig()
     );
   }
-  static getSubtitles({ id, language }) {
+  static getVideoLanguages({ id, language }) {
     return axios.get(`${baseUrl}/get-subtitles/${id}/${language}`, getConfig());
+  }
+  static getSubtitles({ id, from, to }) {
+    return axios.get(
+      `${baseUrl}/get-subtitles/${id}/${from}/${to}`,
+      getConfig()
+    );
   }
   static textTranslate({ text, from, to }) {
     console.log(text, from, to);

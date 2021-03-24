@@ -1,29 +1,28 @@
 {
   "files": {
-    "main.css": "/Learning-App/static/css/main.9fb0e915.chunk.css",
-    "main.js": "/Learning-App/static/js/main.602e36ab.chunk.js",
-    "main.js.map": "/Learning-App/static/js/main.602e36ab.chunk.js.map",
-    "runtime-main.js": "/Learning-App/static/js/runtime-main.3cc755ec.js",
-    "runtime-main.js.map": "/Learning-App/static/js/runtime-main.3cc755ec.js.map",
-    "static/js/2.f930c360.chunk.js": "/Learning-App/static/js/2.f930c360.chunk.js",
-    "static/js/2.f930c360.chunk.js.map": "/Learning-App/static/js/2.f930c360.chunk.js.map",
-    "index.html": "/Learning-App/index.html",
-    "precache-manifest.40b370e92b26b0f37316d03345716f0b.js": "/Learning-App/precache-manifest.40b370e92b26b0f37316d03345716f0b.js",
-    "service-worker.js": "/Learning-App/service-worker.js",
-    "static/css/main.9fb0e915.chunk.css.map": "/Learning-App/static/css/main.9fb0e915.chunk.css.map",
-    "static/js/2.f930c360.chunk.js.LICENSE.txt": "/Learning-App/static/js/2.f930c360.chunk.js.LICENSE.txt",
-    "static/media/general.scss": "/Learning-App/static/media/Inter-SemiBold.ec60b23f.ttf",
-    "static/media/arrowDown.svg": "/Learning-App/static/media/arrowDown.b34c339f.svg",
-    "static/media/camera.svg": "/Learning-App/static/media/camera.9465aead.svg",
-    "static/media/dd.png": "/Learning-App/static/media/dd.31de1ad1.png",
-    "static/media/deleteIcon.svg": "/Learning-App/static/media/deleteIcon.f0f5abf3.svg",
-    "static/media/info.svg": "/Learning-App/static/media/info.7743de1c.svg",
-    "static/media/sheets2.svg": "/Learning-App/static/media/sheets2.8d2048c6.svg"
+    "main.css": "/static/css/main.1439d9c8.chunk.css",
+    "main.js": "/static/js/main.c1a1f51b.chunk.js",
+    "main.js.map": "/static/js/main.c1a1f51b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.85915f13.js",
+    "runtime-main.js.map": "/static/js/runtime-main.85915f13.js.map",
+    "static/js/2.fb59fa34.chunk.js": "/static/js/2.fb59fa34.chunk.js",
+    "static/js/2.fb59fa34.chunk.js.map": "/static/js/2.fb59fa34.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.1c9738dc7da1f6a0d72ff21ff31970fa.js": "/precache-manifest.1c9738dc7da1f6a0d72ff21ff31970fa.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.1439d9c8.chunk.css.map": "/static/css/main.1439d9c8.chunk.css.map",
+    "static/js/2.fb59fa34.chunk.js.LICENSE.txt": "/static/js/2.fb59fa34.chunk.js.LICENSE.txt",
+    "static/media/general.scss": "/static/media/Inter-SemiBold.ec60b23f.ttf",
+    "static/media/arrowDown.svg": "/static/media/arrowDown.b34c339f.svg",
+    "static/media/camera.svg": "/static/media/camera.9465aead.svg",
+    "static/media/dd.png": "/static/media/dd.31de1ad1.png",
+    "static/media/deleteIcon.svg": "/static/media/deleteIcon.f0f5abf3.svg",
+    "static/media/sheets2.svg": "/static/media/sheets2.8d2048c6.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3cc755ec.js",
-    "static/js/2.f930c360.chunk.js",
-    "static/css/main.9fb0e915.chunk.css",
-    "static/js/main.602e36ab.chunk.js"
+    "static/js/runtime-main.85915f13.js",
+    "static/js/2.fb59fa34.chunk.js",
+    "static/css/main.1439d9c8.chunk.css",
+    "static/js/main.c1a1f51b.chunk.js"
   ]
 }

@@ -10,6 +10,21 @@ const SearchItem = ({
     id: { videoId },
   },
 }) => {
+  const escapeHtml = (text) => {
+    var map = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    };
+    for (let key in map) {
+      const reg = new RegExp(map[key], "g");
+      text = text.replace(reg, key);
+    }
+    return text;
+  };
+  title = escapeHtml(title);
   const { language } = useSelector((state) => state.general);
   return (
     <Link to={`/view/${videoId}`} className="search_item">
