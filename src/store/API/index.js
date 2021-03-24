@@ -5,7 +5,7 @@ const getHttpHeaders = () => {
   };
 };
 const getConfig = () => ({ headers: getHttpHeaders() });
-const baseUrl = `146.59.151.245/api/v1`;
+const baseUrl = `/api/v1`;
 class API {
   static search(query) {
     return axios.get(`${baseUrl}/search-by-name/${query}`, getConfig());

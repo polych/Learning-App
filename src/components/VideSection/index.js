@@ -8,6 +8,7 @@ import { getSubtitles } from "../../store/actions/videoActions";
 import Captions from "../Captions";
 import VideoLanguageSelect from "../VideoLanguageSelect";
 import LangBtn from "../UiComponents/LangBtn";
+import BackBtn from "../UiComponents/BackBtn";
 
 const VideSection = ({ id }) => {
   const ref = useRef(null);
@@ -49,6 +50,7 @@ const VideSection = ({ id }) => {
   return (
     <div className="video_wrap">
       <div className="video_section">
+        <BackBtn />
         <LangBtn val={original_lang} langModalShow={langModalShow} />
         <ReactPlayer
           url={`https://www.youtube.com/watch?v=${id}`}

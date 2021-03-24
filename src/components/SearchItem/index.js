@@ -1,7 +1,6 @@
 import React from "react";
 import "./index.scss";
 import { Link } from "react-router-dom";
-import CategoryItem from "../UiComponents/CategoryItem";
 import { useSelector } from "react-redux";
 
 const SearchItem = ({
@@ -41,10 +40,6 @@ const SearchItem = ({
           <h4>{channelTitle}</h4>
         </div>
         <p className="search_item_dscr">{description}</p>
-        <div className="">
-          <CategoryItem label="English" value="Eng" />
-          <CategoryItem label={language.name} value={language.value} />
-        </div>
       </div>
     </Link>
   );

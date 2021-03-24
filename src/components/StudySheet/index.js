@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.scss";
 import sheets from "../../static/images/sheets2.svg";
 import deleteIcon from "../../static/images/deleteIcon.svg";
 import RoundedBtn from "../UiComponents/RoundedBtn";
 
 const StudySheet = () => {
+  const [show, setShow] = useState(false);
+  const showFunc = () => {
+    setShow((prev) => !prev);
+  };
   return (
-    <div className={`notes_section `}>
-      <div className="notes_header">
+    <div className={`notes_section ${show ? "notes_section_active" : ""}`}>
+      <div className="notes_header" onClick={showFunc}>
         <button type="button">
           <img src={sheets} alt="" />
         </button>

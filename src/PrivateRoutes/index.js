@@ -6,6 +6,7 @@ import ViewPage from "../pages/ViewPage";
 import HomePage from "../pages/HomePage";
 import Header from "../components/headerComponents/Header";
 import Menu from "../components/menuComponents/Menu";
+import SheetsPage from "../pages/SheetsPage";
 import SearchPage from "../pages/SearchPage";
 
 const PrivateRoutes = () => {
@@ -25,6 +26,7 @@ const PrivateRoutes = () => {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/view/:id" component={ViewPage} />
+          <Route exact path="/sheets" component={SheetsPage} />
           <Route exact path="/search" component={SearchPage} />
         </Switch>
       </main>
